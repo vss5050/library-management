@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book</title>
+    <style>
+        form{
+            width: fit-content;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Fill this form to add book: </h2>
+    <div>
+        <form action="/book" method="post">
+
+            <fieldset style="padding: 20px;">
+
+                <legend>Book : </legend>
+
+                <label for="title">Book Title : </label>
+                <br>
+                <input type="text" id="title" name="title">
+                <br><br>
+
+                <label for="author">Book Author : </label>
+                <br>
+                <input type="text" id="author" name="author">
+                <br><br>
+
+                <label for="isbn">Book ISBN : </label>
+                <br>
+                <input type="text" id="isbn" name="isbn">
+                <br><br>
+
+                <label for="publisher">Publisher Name : </label>
+                <br>
+                <input type="text" id="publisher" name="publisher">
+                <br><br>
+
+                <label for="publication_year">Publication_year : </label>
+                <br>
+                <input type="text" id="publication_year" name="publication_year">
+                <br><br>
+
+                <label for="category">Category : </label>
+                <br>
+                <input type="text" id="category" name="category">
+                <br><br>
+
+
+                <input type="submit">
+
+            </fieldset>
+
+        </form>
+
+        <h2>Fill this form to add book_copy: </h2>
+        <div>
+            <form action="/book_copy" method="post">
+                <fieldset>
+                    <legend>book copy: </legend>
+                    <label for="copyid">Copy ID : </label>
+                    <br>
+                    <input type="number" id="copyid" name="copyid">
+                    <br><br>
+
+                    <label for="bookid">Book ID : </label>
+                    <br>
+                    <input type="number" id="bookid" name="bookid">
+                    <br><br>
+
+                    <label for="libraryid">Library ID : </label>
+                    <br>
+                    <input type="number" id="libraryid" name="libraryid">
+                    <br><br>
+
+                    <label for="statuss">Status : </label>
+                    <br>
+                    <input type="text" id="statuss" name="statuss">
+                    <br><br>
+
+                    <input type="submit">
+                </fieldset>
+
+            </form>
+
+        </div>
+</body>
+
+</html>

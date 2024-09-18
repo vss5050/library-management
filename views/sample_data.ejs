@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= memberid  %></title>
+    <style>
+        div{
+            display: flex;
+            justify-content: center;
+        }
+        table,td,th{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        td,th{
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2 style="text-align: center;">Books borrowed by memberid:<%= memberid  %></h2>
+
+    <div>
+
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>ISBN</th>
+            <th>Copy ID</th>
+            <th>Due Date</th>
+        </tr>
+    <% if(sampleData.length>0){
+    sampleData.forEach(function (data){
+    %>
+    <tr>
+        <td><%= data.title%> </td>
+        <td><%= data.author%> </td>
+        <td><%= data.isbn%> </td>
+        <td><%= data.copyid%> </td>
+        <td><%= data.due_date%> </td>
+    </tr>
+    <%
+    });
+    } else{
+    %>
+    <tr>
+       <td colspan="5">Data not found</td> 
+    </tr>    
+    <%}%>
+    </table>
+
+    </div>
+
+</body>
+</html>

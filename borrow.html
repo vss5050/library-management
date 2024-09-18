@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borrow</title>
+    <style>
+        div {
+            display: flex;
+            justify-content: center;
+        }
+
+        form {
+            display: inline-block;
+            width: fit-content;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <form action="/borrowed_books" method="post">
+            <label for="memberid">Enter the Member ID to know about your borrowed books: </label>
+            <input type="text" name="memberid" id="memberid">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+    
+
+    <h2 style="text-align: center;">fill this form to borrow a book</h2>
+    <div>
+        <form action="/borrow" method="post">
+
+            <fieldset style="padding: 20px;">
+
+                <legend>Borrow : </legend>
+
+                <label for="borrow_date">Borrow Date : </label>
+                <br>
+                <input type="date" id="borrow_date" name="borrow_date">
+                <br><br>
+
+                <label for="due_date">Due date : </label>
+                <br>
+                <input type="date" id="due_date" name="due_date">
+                <br><br>
+
+                <label for="copyid">Copy ID : </label>
+                <br>
+                <input type="text" id="copyid" name="copyid">
+                <br><br>
+
+                <label for="memberid">Member ID : </label>
+                <br>
+                <input type="text" id="memberid" name="memberid">
+                <br><br>
+
+                <input type="submit">
+
+            </fieldset>
+
+
+
+
+
+        </form>
+    </div>
+
+</body>
+
+</html>
